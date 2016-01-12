@@ -44,7 +44,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'NZGateway'
-copyright = u'2015, NAVYZEBRA'
+copyright = u'2016, NAVYZEBRA'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -197,7 +197,7 @@ latex_elements = {
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
   ('index', 'ReadtheDocsTemplate.tex', u'Read the Docs Template Documentation',
-   u'Read the Docs', 'manual'),
+   u'NZGateway', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
