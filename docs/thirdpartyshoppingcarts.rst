@@ -45,5 +45,3 @@ You will then need to configure the Authorize.Net AIM or SIM payment module with
 - API ID or Login ID is your gateway username.
 - Transaction Key is your gateway password.
 - The MD5 Hash is the word "gateway" without the marks.
-
-For testing, you can use the username and password of "demo" and "password".
