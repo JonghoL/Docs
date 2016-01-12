@@ -10,3 +10,19 @@ We have designed our gateway to be able to handle transaction submissions and re
 To use the Gateway Emulator, your shopping cart or application must support the Authorize.Net AIM or SIM method of integration. If the application supports the AIM or SIM method, you simply need to change the transaction POST URL to our Gateway Emulator URL.
 
 The Gateway does not support the emulation of XML AIM, CIM, ARB, DPM, Card Present or Transaction Details APIs.
+
+
+Our Gateway Emulator URL is:
+
+
+.. list-table::
+   :header-rows: 1
+
+   * - Method
+     - URL
+
+   * - AIM
+     - https://secure.nzgateway.com/gateway/transact.dll
+
+   * - SIM
+     - https://secure.nzgateway.com/cart/ausi.php
