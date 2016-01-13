@@ -11,7 +11,7 @@ Contents:
 .. toctree::
    :maxdepth: 2
 
-   overview
+   integration-overview/index
    threestepredirect
    directpost
    thirdpartyshoppingcarts
