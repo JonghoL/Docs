@@ -9,7 +9,7 @@ Welcome to NZGateway!
 Contents:
 
 .. toctree::
-   :maxdepth: 2
+   :titlesonly:
 
    integration-overview/index
    threestepredirect
