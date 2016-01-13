@@ -5,5 +5,5 @@ Integration Overview
    :titlesonly:
 
    transaction-request-api
-   transaction-retrival-api
+   transaction-retrieval-api
    turnkey-shopping-carts
