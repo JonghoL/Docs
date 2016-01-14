@@ -7,31 +7,6 @@ Step1
 <sale|auth|credit|validate|offline>
 ^^^^^^^^^^^^^^^^^
 
-A table:
-
-====  =====  =================
-Size  Color  Fragrance
-----  -----  -----------------
-9     Red    Excelsior
-10    Blue   Icey Cool
-8     Green  Breezy Meadow
-====  =====  =================
-
-A multi-line table:
-
-===========  ==============================
-Orientation  Reasoning
------------  ------------------------------
-leftward     Because it works well under
-             extreme depths and pressures.
-
-spinward     There's no reason to use
-             spinward. It will only
-             cause apoplexia.
-===========  ==============================
-
-Done.
-
 +--------------------------------------+--------------------------------------------------------------------------------+
 | XML Element                          | Description                                                                    |
 +--------------------------------------+--------------------------------------------------------------------------------+
@@ -62,7 +37,7 @@ Done.
 +--------------------------------------+--------------------------------------------------------------------------------+
 | processor-id                         | If using multiple processors, route to specified processor.                    |
 |                                      | Obtained under Settings->Load Balancing                                        |
-|                                      |  in the merchant control panel.                                                |
+|                                      | in the merchant control panel.                                                 |
 +--------------------------------------+--------------------------------------------------------------------------------+
 | sec-code                             | ACH standard entry class codes.                                                |
 +--------------------------------------+--------------------------------------------------------------------------------+
@@ -93,7 +68,7 @@ Done.
 | customer-id                          | Customer identification.                                                       |
 +--------------------------------------+--------------------------------------------------------------------------------+
 | customer-vault-id                    | Load customer details from an existing customer vault record.                  |
-|                                      |  If set, no payment information is required during step two.                   |
+|                                      | If set, no payment information is required during step two.                    |
 +--------------------------------------+--------------------------------------------------------------------------------+
 | merchant-receipt-email               | Send merchant receipt to email                                                 |
 +--------------------------------------+--------------------------------------------------------------------------------+
@@ -130,11 +105,11 @@ Done.
 | national-tax-amount                  | The national tax amount included in the transaction amount.                    |
 +--------------------------------------+--------------------------------------------------------------------------------+
 | alternate-tax-amount                 | Second tax amount included in the transaction amount in                        |
-|                                      |  countries where more than one type of tax can be applied                      |
-|                                      |  to the purchases.                                                             |
+|                                      | countries where more than one type of tax can be applied                       |
+|                                      | to the purchases.                                                              |
 +--------------------------------------+--------------------------------------------------------------------------------+
 | alternate-tax-id                     | Tax identification number of the merchant that reported                        |
-|                                      |  the alternate tax amount.                                                     |
+|                                      | the alternate tax amount.                                                      |
 +--------------------------------------+--------------------------------------------------------------------------------+
 | vat-tax-amount                       | Contains the amount of any value added taxes which can                         |
 |                                      | be associated with the purchased item.                                         |
@@ -162,12 +137,12 @@ Done.
 | dup-seconds                          | Override duplicate transaction detection time in seconds.                      |
 +--------------------------------------+--------------------------------------------------------------------------------+
 | avs-reject                           | The transaction is rejected if the address verification result is              |
-|                                      |  a code in this list. Values are letters obtained under                        |
+|                                      | a code in this list. Values are letters obtained under                         |
 |                                      | Settings->Address Verification in the control panel.                           |
 +--------------------------------------+--------------------------------------------------------------------------------+
 | cvv-reject                           | The transaction is rejected if the card ID verification result                 |
-|                                      |  is a code in this list.  Values are letters obtained                          |
-|                                      |  under Settings->Card ID Verification in the control panel.                    |
+|                                      | is a code in this list.  Values are letters obtained                           |
+|                                      | under Settings->Card ID Verification in the control panel.                     |
 +--------------------------------------+--------------------------------------------------------------------------------+
 | <billing>                            | The customer's billing information                                             |
 +--------------------------------------+--------------------------------------------------------------------------------+
@@ -208,7 +183,7 @@ Done.
 | <shipping>                           | The customer's shipping information.                                           |
 +--------------------------------------+--------------------------------------------------------------------------------+
 | shipping-id                          | Specify shipping id. Recommended when using customer vault                     |
-|                                      |  hybrid action. Will be ignored if no hybrid add/update-customer is done.      |
+|                                      | hybrid action. Will be ignored if no hybrid add/update-customer is done.       |
 +--------------------------------------+--------------------------------------------------------------------------------+
 | first-name                           | Shipping first name.                                                           |
 +--------------------------------------+--------------------------------------------------------------------------------+
@@ -269,7 +244,7 @@ Done.
 | tax-type                             | Type of value-added taxes that are being used.                                 |
 +--------------------------------------+--------------------------------------------------------------------------------+
 | alternate-tax-id                     | Tax identification number of the merchant that reported the                    |
-|                                      |  alternate tax amount.                                                         |
+|                                      | alternate tax amount.                                                          |
 +--------------------------------------+--------------------------------------------------------------------------------+
 | </product>                           |                                                                                |
 +--------------------------------------+--------------------------------------------------------------------------------+
@@ -287,13 +262,13 @@ Done.
 | amount                               | The plan amount to be charged each billing cycle.                              |
 +--------------------------------------+--------------------------------------------------------------------------------+
 | day-frequency                        | How often, in days, to charge the customer. Cannot be set with                 |
-|                                      |  'month-frequency' or 'day-of-month'.                                          |
+|                                      | 'month-frequency' or 'day-of-month'.                                           |
 +--------------------------------------+--------------------------------------------------------------------------------+
 | month-frequency                      | How often, in months, to charge the customer. Cannot be set with               |
-|                                      |  'day-frequency'. Must be set with 'day-of-month'.                             |
+|                                      | 'day-frequency'. Must be set with 'day-of-month'.                              |
 +--------------------------------------+--------------------------------------------------------------------------------+
 | day-of-month                         | The day that the customer will be charged. Cannot be set with                  |
-|                                      |  'day-frequency'. Must be set with 'month-frequency'.                          |
+|                                      | 'day-frequency'. Must be set with 'month-frequency'.                           |
 +--------------------------------------+--------------------------------------------------------------------------------+
 | </plan>                              |                                                                                |
 +--------------------------------------+--------------------------------------------------------------------------------+
@@ -309,7 +284,7 @@ Done.
 | </add-customer|update-customer>      |                                                                                |
 +--------------------------------------+--------------------------------------------------------------------------------+
 | partial-payments                     | Specify whether a partial amount or full amount of the transaction             |
-|                                      |  should be settled.                                                            |
+|                                      | should be settled.                                                             |
 +--------------------------------------+--------------------------------------------------------------------------------+
 | partial-payment-id                   | Specify a partial payment ID. Required to collect an additional                |
 |                                      | amount associated with an existing Partial Payment Transaction.                |
