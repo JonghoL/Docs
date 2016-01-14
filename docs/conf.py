@@ -124,6 +124,9 @@ html_theme = 'default'
 # pixels large.
 #html_favicon = None
 
+def setup(app):
+    app.add_stylesheet('custom.css?v=1')
+
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
@@ -196,7 +199,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-  ('index', 'ReadtheDocsTemplate.tex', u'Read the Docs Template Documentation',
+  ('index', 'nzgateway.tex', u'NZGateway Documentation',
    u'NZGateway', 'manual'),
 ]
 
@@ -226,7 +229,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    ('index', 'readthedocstemplate', u'Read the Docs Template Documentation',
+    ('index', 'nzgateway', u'NZGateway Documentation',
      [u'NZGateway'], 1)
 ]
 
@@ -240,9 +243,9 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-  ('index', 'ReadtheDocsTemplate', u'Read the Docs Template Documentation',
-   u'NZGateway', 'ReadtheDocsTemplate', 'One line description of project.',
-   'Miscellaneous'),
+  ('index', 'nzgateway', u'NZGateway Documentation',
+   u'NZGateway', 'nzgateway', 'NZGateway Documentation',
+   'Development'),
 ]
 
 # Documents to append as an appendix to all manuals.
