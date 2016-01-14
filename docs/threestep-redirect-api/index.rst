@@ -6,3 +6,4 @@ Three Step Redirect API
 
    methodology
    transaction-operation
+   appendices
