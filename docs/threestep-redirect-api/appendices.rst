@@ -3,11 +3,9 @@ Appendices
 
 Appendix 1
 ---------------
-AVS Response Codes
-^^^^^^^^^^^^^^^^^
-
 
 .. list-table:: AVS Response Codes
+   :widths: 10 90
 
    * - X
      - Exact match, 9-character numeric ZIP
