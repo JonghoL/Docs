@@ -12,16 +12,16 @@ Step1
 +--------------------------------------+--------------------------------------------------------------------------------+
 | <sale|auth|credit|validate|offline>  | Type of transaction to perform.                                                |
 +--------------------------------------+--------------------------------------------------------------------------------+
-| api-key                              | api-key is obtained in the security keys section of the control                |
+| api-key*                              | api-key is obtained in the security keys section of the control               |
 |                                      | panel settings.                                                                |
 +--------------------------------------+--------------------------------------------------------------------------------+
-| redirect-url                         | A URL on your web server that the gateway will redirect your                   |
+| redirect-url*                        | A URL on your web server that the gateway will redirect your                   |
 |                                      | customer to after sensitive data collection.                                   |
 +--------------------------------------+--------------------------------------------------------------------------------+
-| amount                               | Total amount to be charged                                                     |
+| amount*                             | Total amount to be charged                                                      |
 |                                      | (For "validate" actions, amount must be 0.00 or omitted).                      |
 +--------------------------------------+--------------------------------------------------------------------------------+
-| authorization-code                   | Specify authorization code. For use with "offline" action only.                |
+| authorization-code**                   | Specify authorization code. For use with "offline" action only.              |
 +--------------------------------------+--------------------------------------------------------------------------------+
 | ip-address                           | Cardholder's IP address.                                                       |
 +--------------------------------------+--------------------------------------------------------------------------------+
