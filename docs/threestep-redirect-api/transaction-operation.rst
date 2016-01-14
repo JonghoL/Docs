@@ -9,6 +9,7 @@ Method Overview
 
 .. csv-table::
   :header: "XML Element", "Description"
+  :widths: 20, 80
 
   "<sale|auth|credit|validate|offline>", "Type of transaction to perform."
   "api-key", "api-key is obtained in the security keys section of the control panel settings."
