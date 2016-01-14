@@ -12,6 +12,6 @@ Contents:
    :titlesonly:
 
    integration-overview/index
-   threestepredirect
+   threestep-redirect-api/index
    directpost
    thirdpartyshoppingcarts
