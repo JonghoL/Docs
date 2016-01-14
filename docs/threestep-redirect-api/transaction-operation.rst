@@ -7,6 +7,31 @@ Step1
 <sale|auth|credit|validate|offline>
 ^^^^^^^^^^^^^^^^^
 
+A table:
+
+====  =====  =================
+Size  Color  Fragrance
+----  -----  -----------------
+9     Red    Excelsior
+10    Blue   Icey Cool
+8     Green  Breezy Meadow
+====  =====  =================
+
+A multi-line table:
+
+===========  ==============================
+Orientation  Reasoning
+-----------  ------------------------------
+leftward     Because it works well under
+             extreme depths and pressures.
+
+spinward     There's no reason to use
+             spinward. It will only
+             cause apoplexia.
+===========  ==============================
+
+Done.
+
 +--------------------------------------+--------------------------------------------------------------------------------+
 | XML Element                          | Description                                                                    |
 +--------------------------------------+--------------------------------------------------------------------------------+
