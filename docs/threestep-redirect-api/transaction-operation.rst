@@ -23,14 +23,15 @@ Sale/Auth/Credit/Validate/Offline
 +----------------------------------------+--------------------------------------------------------------------------------+
 | authorization-code**                   | Specify authorization code. For use with "offline" action only.                |
 +----------------------------------------+--------------------------------------------------------------------------------+
-| ip-address                             | Cardholder's IP address.                                                       |
+| ip-address                             | Cardholder's IP address. Format: xxx.xxx.xxx.xxx                               |
 +----------------------------------------+--------------------------------------------------------------------------------+
 | industry                               | Specify industry classification of transaction.                                |
+|                                        | Values: 'ecommerce', 'moto', or 'retail'                                       |
 +----------------------------------------+--------------------------------------------------------------------------------+
-| billing-method                         | Set additional billing indicators.                                             |
+| billing-method                         | Set additional billing indicators. Values: 'recurring' or 'installment'        |
 +----------------------------------------+--------------------------------------------------------------------------------+
 | billing-number                         | Specify installment billing number, on supported processors.                   |
-|                                        | For use when "billing-method" is set to installment.                           |
+|                                        | For use when "billing-method" is set to installment. Values: 0-99              |
 +----------------------------------------+--------------------------------------------------------------------------------+
 | billing-total                          | Specify installment billing total on supported processors.                     |
 |                                        | For use when "billing-method" is set to installment.                           |
@@ -40,6 +41,7 @@ Sale/Auth/Credit/Validate/Offline
 |                                        | in the merchant control panel.                                                 |
 +----------------------------------------+--------------------------------------------------------------------------------+
 | sec-code                               | ACH standard entry class codes.                                                |
+|                                        | Values: 'PPD', 'WEB', 'TEL', 'CCD', 'POP', or 'ARC'                            |
 +----------------------------------------+--------------------------------------------------------------------------------+
 | descriptor                             | Set payment descriptor on supported processors.                                |
 +----------------------------------------+--------------------------------------------------------------------------------+
@@ -61,7 +63,7 @@ Sale/Auth/Credit/Validate/Offline
 +----------------------------------------+--------------------------------------------------------------------------------+
 | descriptor-url                         | Set payment descriptor url on supported processors.                            |
 +----------------------------------------+--------------------------------------------------------------------------------+
-| currency                               | Set transaction currency.                                                      |
+| currency                               | Set transaction currency. Format: ISO 4217                                     |
 +----------------------------------------+--------------------------------------------------------------------------------+
 | order-description                      | Order description.                                                             |
 +----------------------------------------+--------------------------------------------------------------------------------+
@@ -72,13 +74,14 @@ Sale/Auth/Credit/Validate/Offline
 +----------------------------------------+--------------------------------------------------------------------------------+
 | merchant-receipt-email                 | Send merchant receipt to email                                                 |
 +----------------------------------------+--------------------------------------------------------------------------------+
-| customer-receipt                       | Send receipt if billing email included.                                        |
+| customer-receipt                       | Send receipt if billing email included. Values: 'true' or 'false'              |
 +----------------------------------------+--------------------------------------------------------------------------------+
 | merchant-defined-field-#               | Merchant specified custom fields.                                              |
+|                                        | Format: <merchant-defined-field-1>Value</merchant-defined-field-1>             |
 +----------------------------------------+--------------------------------------------------------------------------------+
 | tracking-number                        | Shipping tracking number.                                                      |
 +----------------------------------------+--------------------------------------------------------------------------------+
-| shipping-carrier                       | Shipping carrier.                                                              |
+| shipping-carrier                       | Shipping carrier. Values: 'ups', 'fedex', 'dhl', or 'usps'                     |
 +----------------------------------------+--------------------------------------------------------------------------------+
 | order-id***                            | Order id.                                                                      |
 +----------------------------------------+--------------------------------------------------------------------------------+
@@ -86,7 +89,7 @@ Sale/Auth/Credit/Validate/Offline
 +----------------------------------------+--------------------------------------------------------------------------------+
 | tax-amount***                          | The sales tax included in the transaction amount associated with               |
 |                                        | the purchase. Setting tax equal to '-1' indicates an order that                |
-|                                        | is exempt from sales tax.                                                      |
+|                                        | is exempt from sales tax. Default: '0.00' Format: x.xx                         |
 +----------------------------------------+--------------------------------------------------------------------------------+
 | shipping-amount***                     | Total shipping amount.                                                         |
 +----------------------------------------+--------------------------------------------------------------------------------+
@@ -97,25 +100,25 @@ Sale/Auth/Credit/Validate/Offline
 |                                        | The acquirer or processor will provide a list of current codes.                |
 +----------------------------------------+--------------------------------------------------------------------------------+
 | duty-amount                            | Amount included in the transaction amount associated with                      |
-|                                        | the import of the purchased goods.                                             |
+|                                        | the import of the purchased goods. Default: '0.00'                             |
 +----------------------------------------+--------------------------------------------------------------------------------+
 | discount-amount                        | Amount included in the transaction amount of any discount                      |
-|                                        | applied to the complete order by the merchant.                                 |
+|                                        | applied to the complete order by the merchant. Default: '0.00'                 |
 +----------------------------------------+--------------------------------------------------------------------------------+
-| national-tax-amount                    | The national tax amount included in the transaction amount.                    |
+| national-tax-amount                    | The national tax amount included in the transaction amount. Default: '0.00'    |
 +----------------------------------------+--------------------------------------------------------------------------------+
 | alternate-tax-amount                   | Second tax amount included in the transaction amount in                        |
 |                                        | countries where more than one type of tax can be applied                       |
-|                                        | to the purchases.                                                              |
+|                                        | to the purchases. Default: '0.00'                                              |
 +----------------------------------------+--------------------------------------------------------------------------------+
 | alternate-tax-id                       | Tax identification number of the merchant that reported                        |
 |                                        | the alternate tax amount.                                                      |
 +----------------------------------------+--------------------------------------------------------------------------------+
 | vat-tax-amount                         | Contains the amount of any value added taxes which can                         |
-|                                        | be associated with the purchased item.                                         |
+|                                        | be associated with the purchased item. Default: '0.00'                         |
 +----------------------------------------+--------------------------------------------------------------------------------+
 | vat-tax-rate                           | Contains the tax rate used to calculate the sales tax amount                   |
-|                                        | appearing. Can contain up to 2 decimal places, ie 1% = 1.00.                   |
+|                                        | appearing. Can contain up to 2 decimal places, ie 1% = 1.00. Default: '0.00'   |
 +----------------------------------------+--------------------------------------------------------------------------------+
 | vat-invoice-reference-number           | Invoice number that is associated with the VAT invoice.                        |
 +----------------------------------------+--------------------------------------------------------------------------------+
@@ -124,25 +127,25 @@ Sale/Auth/Credit/Validate/Offline
 | merchant-vat-registration              | Government assigned tax identification number of the merchant                  |
 |                                        | from whom the goods or services were purchased.                                |
 +----------------------------------------+--------------------------------------------------------------------------------+
-| order-date                             | Purchase order date. Defaults to the date of the transaction.                  |
+| order-date                             | Purchase order date. Defaults to the date of the transaction. Format: YYMMDD   |
 +----------------------------------------+--------------------------------------------------------------------------------+
-| cardholder-auth†                       | Set 3D Secure condition.                                                       |
+| cardholder-auth†                       | Set 3D Secure condition. Values: 'verified' or 'attempted'                     |
 +----------------------------------------+--------------------------------------------------------------------------------+
-| eci†                                   | E-commerce indicator.                                                          |
+| eci†                                   | E-commerce indicator. Values: '2', '5', or '7'                                 |
 +----------------------------------------+--------------------------------------------------------------------------------+
-| cavv†                                  | Cardholder authentication verification value.                                  |
+| cavv†                                  | Cardholder authentication verification value. Format: base64 encoded           |
 +----------------------------------------+--------------------------------------------------------------------------------+
-| xid†                                   | Cardholder authentication transaction id.                                      |
+| xid†                                   | Cardholder authentication transaction id. Format: base64 encoded               |
 +----------------------------------------+--------------------------------------------------------------------------------+
 | dup-seconds‡                           | Override duplicate transaction detection time in seconds.                      |
 +----------------------------------------+--------------------------------------------------------------------------------+
 | avs-reject‡                            | The transaction is rejected if the address verification result is              |
 |                                        | a code in this list. Values are letters obtained under                         |
-|                                        | Settings->Address Verification in the control panel.                           |
+|                                        | Settings->Address Verification in the control panel. Format: x|x|x|x...        |
 +----------------------------------------+--------------------------------------------------------------------------------+
 | cvv-reject‡                            | The transaction is rejected if the card ID verification result                 |
 |                                        | is a code in this list.  Values are letters obtained                           |
-|                                        | under Settings->Card ID Verification in the control panel.                     |
+|                                        | under Settings->Card ID Verification in the control panel. Format: x|x|x|x...  |
 +----------------------------------------+--------------------------------------------------------------------------------+
 | **<billing>**                          | The customer's billing information                                             |
 +----------------------------------------+--------------------------------------------------------------------------------+
@@ -221,25 +224,25 @@ Sale/Auth/Credit/Validate/Offline
 |                                        | being supplied.                                                                |
 |                                        | The acquirer or processor will provide a list of current codes.                |
 +----------------------------------------+--------------------------------------------------------------------------------+
-| unit-of-measure****                    | Code for units of measurement as used in international trade.                  |
+| unit-of-measure****                    | Code for units of measurement as used in international trade. Default: 'EACH'  |
 +----------------------------------------+--------------------------------------------------------------------------------+
 | unit-cost****                          | Unit cost of item purchased. May contain up to 4 decimal places.               |
 +----------------------------------------+--------------------------------------------------------------------------------+
-| quantity****                           | Quantity of the item(s) being purchased.                                       |
+| quantity****                           | Quantity of the item(s) being purchased. Default: '1'                          |
 +----------------------------------------+--------------------------------------------------------------------------------+
 | total-amount****                       | Purchase amount associated with the item. Default to 'unit-cost' x 'quantity'  |
 |                                        | rounded to the nearest penny.                                                  |
 +----------------------------------------+--------------------------------------------------------------------------------+
 | tax-amount****                         | Amount of tax on specific item. Amount should not be included                  |
-|                                        | in item-total-amount.                                                          |
+|                                        | in item-total-amount. Default: '0.00'                                          |
 +----------------------------------------+--------------------------------------------------------------------------------+
-| tax-rate****                           | Percentage representing the value-added tax applied. 1% = 1.00.                |
+| tax-rate****                           | Percentage representing the value-added tax applied. 1% = 1.00. Default: '0.00'|
 +----------------------------------------+--------------------------------------------------------------------------------+
 | discount-amount                        | Discount amount which can have been applied by the merchant                    |
 |                                        | on the sale of the specific item. Amount should not be included                |
 |                                        | in 'item-total-amount'.                                                        |
 +----------------------------------------+--------------------------------------------------------------------------------+
-| discount-rate                          | Discount rate for the line item. 1% = 1.00.                                    |
+| discount-rate                          | Discount rate for the line item. 1% = 1.00. Default: '0.00'                    |
 +----------------------------------------+--------------------------------------------------------------------------------+
 | tax-type                               | Type of value-added taxes that are being used.                                 |
 +----------------------------------------+--------------------------------------------------------------------------------+
@@ -251,24 +254,27 @@ Sale/Auth/Credit/Validate/Offline
 | **<add-subscription>**                 | Perform a simultaneous 'hybrid' recurring action while processing              |
 |                                        | a transaction.                                                                 |
 +----------------------------------------+--------------------------------------------------------------------------------+
-| start-date                             | The first day that the customer will be charged.                               |
+| start-date                             | The first day that the customer will be charged. Format: YYYYMMDD              |
 +----------------------------------------+--------------------------------------------------------------------------------+
-| <plan>                                 |                                                                                |
+| **<plan>**                             |                                                                                |
 +----------------------------------------+--------------------------------------------------------------------------------+
 | plan-id                                | The unique plan ID that references only this recurring plan.                   |
 +----------------------------------------+--------------------------------------------------------------------------------+
 | payments                               | The number of payments before the recurring plan is complete.                  |
+|                                        | Note: Use '0' for 'until canceled'                                             |
 +----------------------------------------+--------------------------------------------------------------------------------+
-| amount                                 | The plan amount to be charged each billing cycle.                              |
+| amount                                 | The plan amount to be charged each billing cycle. Format: x.xx                 |
 +----------------------------------------+--------------------------------------------------------------------------------+
 | day-frequency                          | How often, in days, to charge the customer. Cannot be set with                 |
 |                                        | 'month-frequency' or 'day-of-month'.                                           |
 +----------------------------------------+--------------------------------------------------------------------------------+
 | month-frequency                        | How often, in months, to charge the customer. Cannot be set with               |
-|                                        | 'day-frequency'. Must be set with 'day-of-month'.                              |
+|                                        | 'day-frequency'. Must be set with 'day-of-month'.  Values: 1 through 24        |
 +----------------------------------------+--------------------------------------------------------------------------------+
 | day-of-month                           | The day that the customer will be charged. Cannot be set with                  |
 |                                        | 'day-frequency'. Must be set with 'month-frequency'.                           |
+|                                        | Values: 1 through 31 - for months without 29, 30, or 31 days,                  |
+|                                        | the charge will be on the last day                                             |
 +----------------------------------------+--------------------------------------------------------------------------------+
 | **</plan>**                            |                                                                                |
 +----------------------------------------+--------------------------------------------------------------------------------+
@@ -281,10 +287,11 @@ Sale/Auth/Credit/Validate/Offline
 | customer-vault-id                      | Specify customer vault id. If omitted, will be auto-generated                  |
 |                                        | and returned in response. Required for 'update-customer'.                      |
 +----------------------------------------+--------------------------------------------------------------------------------+
-| </add-customer|update-customer>        |                                                                                |
+| **</add-customer|update-customer>**    |                                                                                |
 +----------------------------------------+--------------------------------------------------------------------------------+
 | partial-payments††                     | Specify whether a partial amount or full amount of the transaction             |
 |                                        | should be settled.                                                             |
+|                                        | Format: 'settle_partial' or 'payment_in_full'                                  |
 +----------------------------------------+--------------------------------------------------------------------------------+
 | partial-payment-id††                   | Specify a partial payment ID. Required to collect an additional                |
 |                                        | amount associated with an existing Partial Payment Transaction.                |
