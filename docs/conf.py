@@ -124,14 +124,11 @@ html_theme = 'default'
 # pixels large.
 #html_favicon = None
 
-def setup(app):
-    app.add_stylesheet('custom.css?v=1')
-
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
-
+html_style = 'custom.css'
 # Add any extra paths that contain custom files (such as robots.txt or
 # .htaccess) here, relative to this directory. These files are copied
 # directly to the root of the documentation.
