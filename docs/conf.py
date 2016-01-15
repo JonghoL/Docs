@@ -43,7 +43,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'NZGateway'
+project = u'NZPayment Gateway'
 copyright = u'2016, NAVYZEBRA'
 
 # The version info for the project you're documenting, acts as replacement for
@@ -176,7 +176,7 @@ html_static_path = ['_static']
 #html_file_suffix = None
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'NZGateway'
+htmlhelp_basename = 'NZPayment Gateway'
 
 
 # -- Options for LaTeX output ---------------------------------------------
@@ -196,8 +196,8 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-  ('index', 'nzgateway.tex', u'NZGateway Documentation',
-   u'NZGateway', 'manual'),
+  ('index', 'nzpg.tex', u'NZPayment Gateway Documentation',
+   u'NZPG', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
@@ -226,8 +226,8 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    ('index', 'nzgateway', u'NZGateway Documentation',
-     [u'NZGateway'], 1)
+    ('index', 'nzpg', u'NZPayment Gateway Documentation',
+     [u'NZPG'], 1)
 ]
 
 # If true, show URL addresses after external links.
@@ -240,8 +240,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-  ('index', 'nzgateway', u'NZGateway Documentation',
-   u'NZGateway', 'nzgateway', 'NZGateway Documentation',
+  ('index', 'nzpg', u'NZPayment Gateway Documentation',
+   u'NZPG', 'nzpg', 'NZPayment Gateway Documentation',
    'Development'),
 ]
 
