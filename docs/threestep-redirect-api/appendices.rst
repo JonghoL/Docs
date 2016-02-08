@@ -78,25 +78,25 @@ Appendix 3
 .. list-table:: Result Code Table
    :widths: 10 90
 
-    * - 100
-    - Transaction was approved.
-    * - 200
-    - Transaction was declined by processor.
-    * - 201
-    - Do not honor.
-    * - Y
-    - Exact match, 5-character numeric ZIP
-    * - Y
-    - Exact match, 5-character numeric ZIP
-    * - Y
-    - Exact match, 5-character numeric ZIP
-    * - Y
-    - Exact match, 5-character numeric ZIP
-    * - Y
-    - Exact match, 5-character numeric ZIP
-    * - Y
-    - Exact match, 5-character numeric ZIP
-    * - Y
-    - Exact match, 5-character numeric ZIP
-    * - Y
+   * - 100
+     - Transaction was approved.
+   * - 200
+     - Transaction was declined by processor.
+   * - 201
+     - Do not honor.
+   * - Y
+     - Exact match, 5-character numeric ZIP
+   * - Y
+     - Exact match, 5-character numeric ZIP
+   * - Y
+     - Exact match, 5-character numeric ZIP
+   * - Y
+     - Exact match, 5-character numeric ZIP
+   * - Y
+     - Exact match, 5-character numeric ZIP
+   * - Y
+     - Exact match, 5-character numeric ZIP
+   * - Y
+     - Exact match, 5-character numeric ZIP
+   * - Y
      - Exact match, 5-character numeric ZIP
