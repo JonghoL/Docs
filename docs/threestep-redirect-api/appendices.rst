@@ -1,6 +1,10 @@
 Appendices
 =============
 
+  - `Appendix 1`_
+	- `Appendix 2`_
+	- `Appendix 3`_
+
 Appendix 1
 ---------------
 
@@ -47,3 +51,28 @@ Appendix 1
      - AVS not available
    * - B
      - AVS not available
+
+
+
+Appendix 2
+---------------
+
+.. list-table:: AVS Response Codes
+  :widths: 10 90
+
+  * - X
+    - Exact match, 9-character numeric ZIP
+  * - Y
+    - Exact match, 5-character numeric ZIP
+
+
+Appendix 3
+---------------
+
+.. list-table:: AVS Response Codes
+   :widths: 10 90
+
+   * - X
+     - Exact match, 9-character numeric ZIP
+   * - Y
+     - Exact match, 5-character numeric ZIP
