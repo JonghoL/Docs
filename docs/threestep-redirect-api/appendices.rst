@@ -2,8 +2,8 @@ Appendices
 =============
 
   - `Appendix 1`_
-	- `Appendix 2`_
-	- `Appendix 3`_
+  - `Appendix 2`_
+  - `Appendix 3`_
 
 Appendix 1
 ---------------
@@ -57,22 +57,46 @@ Appendix 1
 Appendix 2
 ---------------
 
-.. list-table:: AVS Response Codes
+.. list-table:: CVV Response Codes
   :widths: 10 90
 
-  * - X
-    - Exact match, 9-character numeric ZIP
-  * - Y
-    - Exact match, 5-character numeric ZIP
+  * - M
+    - CVV2/CVC2 match
+  * - N
+    - CVV2/CVC2 no match
+  * - P
+    - Not processed
+  * - S
+    - Merchant has indicated that CVV2/CVC2 is not present on card
+  * - U
+    - Issuer is not certified and/or has not provided Visa encryption keys
 
 
 Appendix 3
 ---------------
 
-.. list-table:: AVS Response Codes
+.. list-table:: Result Code Table
    :widths: 10 90
 
-   * - X
-     - Exact match, 9-character numeric ZIP
-   * - Y
+    * - 100
+    - Transaction was approved.
+    * - 200
+    - Transaction was declined by processor.
+    * - 201
+    - Do not honor.
+    * - Y
+    - Exact match, 5-character numeric ZIP
+    * - Y
+    - Exact match, 5-character numeric ZIP
+    * - Y
+    - Exact match, 5-character numeric ZIP
+    * - Y
+    - Exact match, 5-character numeric ZIP
+    * - Y
+    - Exact match, 5-character numeric ZIP
+    * - Y
+    - Exact match, 5-character numeric ZIP
+    * - Y
+    - Exact match, 5-character numeric ZIP
+    * - Y
      - Exact match, 5-character numeric ZIP
