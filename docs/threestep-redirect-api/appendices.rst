@@ -84,19 +84,39 @@ Appendix 3
      - Transaction was declined by processor.
    * - 201
      - Do not honor.
-   * - Y
-     - Exact match, 5-character numeric ZIP
-   * - Y
-     - Exact match, 5-character numeric ZIP
-   * - Y
-     - Exact match, 5-character numeric ZIP
-   * - Y
-     - Exact match, 5-character numeric ZIP
-   * - Y
-     - Exact match, 5-character numeric ZIP
-   * - Y
-     - Exact match, 5-character numeric ZIP
-   * - Y
-     - Exact match, 5-character numeric ZIP
-   * - Y
-     - Exact match, 5-character numeric ZIP
+   * - 202
+     - Insufficient funds.
+   * - 203
+     - Over limit.
+   * - 204
+     - Transaction not allowed.
+   * - 220
+     - Incorrect payment information
+   * - 221
+     - No such card issuer.
+   * - 222
+     - No card number on file with issuer.
+   * - 223
+     - Expired card.
+   * - 224
+     - Invalid expiration date.
+   * - 225
+     - Invalid card security code.
+   * - 240
+     - Call issuer for further information.
+   * - 250
+     - Pick up card.
+   * - 251
+     - Lost card.
+   * - 252
+     - Stolen card.
+   * - 253
+     - Fraudulent card.
+   * - 260
+     - Declined with further instructions available. (See response text)
+   * - 261
+     - Declined-Stop all recurring payments.
+   * - 262
+     - Declined-Stop this recurring program.
+   * - 263
+     - Declined-Update cardholder data available.
