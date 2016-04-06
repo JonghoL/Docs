@@ -14,4 +14,5 @@ Contents:
    integration-overview/index
    threestep-redirect-api/index
    directpost
+   query-api/index
    thirdpartyshoppingcarts
