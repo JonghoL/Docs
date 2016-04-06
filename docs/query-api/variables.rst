@@ -72,8 +72,8 @@ Variables
 |                      | number. You can use either the full number or the last 4 digits|
 |                      | of the credit card number.                                     |
 +----------------------+----------------------------------------------------------------+
-| merchant_defined_    | Retrieves only transactions with the specified merchant defined|
-|field_#               | field value.                                                   |
+| merchant_defined_fiel| Retrieves only transactions with the specified merchant defined|
+|d_#                   | field value.                                                   |
 |                      | Replace the '#' with a field number (1-20)                     |
 |                      | (Example: merchant_defined_field_12=value)                     |
 +----------------------+----------------------------------------------------------------+
@@ -120,8 +120,8 @@ Variables
 |                      |                                                                |
 |                      | Example 2: mobile_device_license=any_mobile                    |
 +----------------------+----------------------------------------------------------------+
-| mobile_device_       | Retrieves only transactions processed using mobile devices with|
-|nickname              | the specified nickname.                                        |
+| mobile_device_nicknam| Retrieves only transactions processed using mobile devices with|
+|e                     | the specified nickname.                                        |
 |                      | The nicknames for this parameter are available in the License  |
 |                      | Manager.                                                       |
 |                      | Can not be used with 'mobile_device_license'.                  |
