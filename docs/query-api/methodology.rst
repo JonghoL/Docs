@@ -15,11 +15,11 @@ Communication
 The communication protocol used to send messages to the Payment Gateway is through the HTTP protocol over an SSL connection (HTTPS). The format you must use is name/value pairs delimited by ampersand.
 
 
-+----------------------+----------------------------------------------------------------------------+
-| URL                  | https://secure.nzgateway.com/api/query.php                                 |
-+----------------------+----------------------------------------------------------------------------+
-| Example Query String | username=**username**&password=**password**&transaction_id=**123456789**   |
-+----------------------+----------------------------------------------------------------------------+
++----------------------+----------------------------------------------------------------+
+| URL                  | https://secure.nzgateway.com/api/query.php                     |
++----------------------+---------------------------------------------------------- -----+
+| Example Query String | username=username&password=password&transaction_id=123456789   |
++----------------------+----------------------------------------------------------------+
 
 
 You may use either GET or POST to pass your request to the Query API. The name/value pairs that are accepted by the Payment Gateway can be found in the 'Variables' section of this API.
