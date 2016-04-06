@@ -7,6 +7,35 @@ Step One
 Sale/Auth/Credit/Validate/Offline XML Request
 ^^^^^^^^^^^^^^^^^
 
+For individual excel file formats, please install them as you wish:
+
+.. _a-map-of-plugins-and-file-formats:
+.. table:: a map of plugins and supported excel file formats
+
+   ========= ======================= ============= ======================== =============================	
+   Plugin    Supported file formats  Dependencies  Python versions			 Comments
+   ========= ======================= ============= ======================== =============================	
+   pyexcel   csv, csvz [#f1]_, tsv,  `pyexcel-io`_ 2.6, 2.7, 3.3, 3.4, pypy 						
+             tsvz [#f2]_     
+   `xls`_    xls, xlsx(read only),   xlrd, xlwt    2.6, 2.7, 3.3, 3.4, pypy supports reading xlsx as well
+             xlsm(read only)
+   `xlsx`_   xlsx                    openpyxl      2.6, 2.7, 3.3, 3.4, pypy 					
+   `ods3`_   ods                     ezodf, lxml   2.6, 2.7, 3.3, 3.4							
+   `ods`_    ods (python 2.6, 2.7)   odfpy         2.6, 2.7									
+   `text`_   json, rst, mediawiki,   tabulate      2.6, 2.7, 3.3, 3.4, pypy writing to files only
+             latex, grid, etc.
+   ========= ======================= ============= ======================== =============================
+
+.. _pyexcel-io: https://github.com/pyexcel/pyexcel-io
+.. _xls: https://github.com/pyexcel/pyexcel-xls
+.. _xlsx: https://github.com/pyexcel/pyexcel-xlsx
+.. _ods: https://github.com/pyexcel/pyexcel-ods
+.. _ods3: https://github.com/pyexcel/pyexcel-ods3
+.. _text: https://github.com/pyexcel/pyexcel-text
+
+
+Please import them before you start to access the desired file formats::
+
 +----------------------------------------+--------------------------------------------------------------------------------+
 | XML Element                            | Description                                                                    |
 +========================================+================================================================================+
