@@ -12,8 +12,12 @@ Variables
 |                      | should be separated by commas. For example, to retrieve all    |
 |                      | transactions pending settlement or complete, the following     |
 |                      | could be used:                                                 |
+|                      |                                                                |
+|                      | Example: condition=pendingsettlement,complete                  |
+|                      +----------------------------------------------------------------+
+|                      | pending: 'Auth Only' transactions that are awaiting capture.   |
 +----------------------+----------------------------------------------------------------+
-| username*            | Merchant username.                                             | 
+| username*            | Merchant username.                                             |
 | username*            | Merchant username.                                             |
 +----------------------+----------------------------------------------------------------+
 | username*            | Merchant username.                                             |
