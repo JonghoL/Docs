@@ -5,3 +5,4 @@ Query API
    :titlesonly:
 
    methodology
+   variables
